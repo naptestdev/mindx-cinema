@@ -15,7 +15,7 @@
     />
 
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/info.css" />
   </head>
   <body>
     <div class="backdrop">
@@ -38,44 +38,52 @@
         <i style="font-size: 25px" class="fa-solid fa-magnifying-glass"></i
       ></a>
     </div>
-    <div class="hero-section">
-      <img
-        id="hero-image"
-        class="hero-image fade-in"
-        onload="this.style.opacity = '0.5'"
-        alt=""
-      />
 
-      <div class="hero-section-info">
-        <div>
-          <p id="hero-title" class="hero-section-info-title"></p>
-          <p
-            id="hero-description"
-            class="hero-section-info-description multiline-ellipsis-4"
-          ></p>
-          <div class="action-buttons-container">
-            <a id="watch-now-btn" class="btn">
+    <main>
+      <div class="background-img"></div>
+      <div class="banner-container">
+        <div class="banner-preview-img-container">
+          <img
+            id="preview-img"
+            onload="this.style.opacity = '1'"
+            class="fade-in"
+            alt=""
+          />
+        </div>
+        <div class="banner-info-container">
+          <div>
+            <a style="display: inline-block" id="watch-now-btn" class="btn">
               <i class="fa-regular fa-circle-play"></i>
               <span>Watch Now</span>
             </a>
-            <a id="view-info-btn" class="btn">
-              <i class="fa-solid fa-circle-info"></i>
-              <span>View Info</span>
-            </a>
           </div>
+          <p id="movie-title" style="font-size: 36px; line-height: 40px"></p>
+          <p
+            id="movie-description"
+            style="font-size: 18px; line-height: 28px; text-align: justify"
+          ></p>
+          <p id="release-date"></p>
+
+          <div id="genres"></div>
         </div>
       </div>
-      <div class="hero-preview-img-container">
-        <img
-          class="fade-in"
-          onload="this.style.opacity = '1'"
-          id="hero-preview-image"
-          alt=""
-        />
-      </div>
-    </div>
+      <div class="casts-container">
+        <h1
+          style="
+            font-size: 24px;
+            line-height: 32px;
+            margin: 32px 0;
+            font-weight: 500;
+          "
+        >
+          Casts
+        </h1>
 
-    <main></main>
+        <div class="casts-grid"></div>
+      </div>
+
+      <div id="similar"></div>
+    </main>
 
     <footer>
       <p>Copyright &copy; MindX School</p>
@@ -96,6 +104,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="./scripts/config.js"></script>
-    <script src="./scripts/home.js"></script>
+    <script src="./scripts/info.js"></script>
   </body>
 </html>
