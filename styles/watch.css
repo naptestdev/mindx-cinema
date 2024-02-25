@@ -34,10 +34,6 @@ main {
   transition: 0.3s;
 }
 
-#movie-title:hover {
-  color: var(--orange);
-}
-
 #similar {
   flex-shrink: 0;
   width: 320px;

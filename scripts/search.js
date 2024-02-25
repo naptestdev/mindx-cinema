@@ -1,3 +1,5 @@
+import { TMDB_API_KEY } from "./config.js";
+
 const searchQuery = new URLSearchParams(location.search);
 
 const query = searchQuery.get("q")?.trim();

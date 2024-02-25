@@ -80,6 +80,12 @@ a {
   align-items: center;
   transition: 0.3s;
   background: transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-background-visible {
+  background: var(--dark);
+  border-bottom: 2px solid var(--dark-lighten);
 }
 
 .backdrop {
@@ -158,4 +164,66 @@ footer > div {
   font-size: 24px;
   line-height: 32px;
   margin: 32px 3vw 12px 3vw;
+}
+
+.avatar-action {
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar-action img {
+  width: 25px;
+  height: 25px;
+  border-radius: 9999px;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: 0.3s;
+  z-index: 2;
+  right: 0;
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px gray;
+  border-radius: 6px;
+  overflow: hidden;
+  width: max-content;
+}
+
+.popup-left {
+  right: unset;
+  left: 0;
+}
+
+.popup .action-button {
+  cursor: pointer;
+  width: 100%;
+  text-wrap: nowrap;
+  border: none;
+  outline: none;
+  background: white;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  transition: 0.3s;
+}
+
+.popup .action-button:hover {
+  background: #e8e8e8;
+}
+
+.popup .action-button i {
+  font-size: 14px !important;
+}
+.popup .action-button {
+  font-size: 14px !important;
+}
+
+.avatar-action:focus-within .popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }

@@ -1,3 +1,5 @@
+import { TMDB_API_KEY } from "./config.js";
+
 (async () => {
   const HomeAPIRoutes = {
     "Trending Movies": { url: "/trending/movie/week" },
