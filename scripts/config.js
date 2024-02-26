@@ -33,9 +33,12 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     document.querySelector("#avatar-action-container").innerHTML = /*html*/ `
   <div tabindex="0" class="avatar-action">
-    <img src="${`https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
-      user.displayName
-    )}`}" />
+    <img src="${
+      user.photoURL ||
+      `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
+        user.displayName
+      )}`
+    }" />
     <div class="popup">
       <button class="action-button" onclick="handleSignOut()">
         <i class="fa-solid fa-right-from-bracket"></i>

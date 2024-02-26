@@ -102,6 +102,11 @@ a {
   z-index: 100;
 }
 
+.backdrop-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 footer {
   display: flex;
   justify-content: space-between;

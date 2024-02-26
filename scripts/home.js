@@ -76,8 +76,7 @@ import { TMDB_API_KEY } from "./config.js";
     `;
   });
 
-  document.querySelector(".backdrop").style.opacity = 0;
-  document.querySelector(".backdrop").style.visibility = "hidden";
+  document.querySelector(".backdrop").classList.add("backdrop-hidden");
 
   Object.keys(data).map((key, index) => {
     new Swiper(`.swiper-${index}`, {

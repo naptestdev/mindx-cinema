@@ -48,6 +48,5 @@ const query = searchQuery.get("q")?.trim();
   `;
   }
 
-  document.querySelector(".backdrop").style.opacity = 0;
-  document.querySelector(".backdrop").style.visibility = "hidden";
+  document.querySelector(".backdrop").classList.add("backdrop-hidden");
 })();

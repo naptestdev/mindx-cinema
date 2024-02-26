@@ -133,8 +133,7 @@ const labels = ["data", "casts", "similar"];
     },
   });
 
-  document.querySelector(".backdrop").style.opacity = 0;
-  document.querySelector(".backdrop").style.visibility = "hidden";
+  document.querySelector(".backdrop").classList.add("backdrop-hidden");
 
   document.title = `${result.data.title || result.data.name} - MindX Cinema`;
 })();
