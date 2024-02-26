@@ -66,9 +66,9 @@ const labels = ["data", "similar"];
 
   console.log(result);
 
-  // document.querySelector(
-  //   "iframe"
-  // ).src = `https://www.2embed.cc/embed/${result.data.id}`;
+  document.querySelector(
+    "iframe"
+  ).src = `https://www.2embed.cc/embed/${result.data.id}`;
   document.querySelector("#movie-title").innerText =
     result.data.title || result.data.name;
   document.querySelector("#movie-description").innerText = result.data.overview;
@@ -110,7 +110,7 @@ const labels = ["data", "similar"];
           `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(
             user?.displayName
           )}`
-        : `https://cdn.jsdelivr.net/gh/napthedev/cmtio/public/default-avatar.png`
+        : `./assets/default-avatar.png`
     }" />
 
     <div >

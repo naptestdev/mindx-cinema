@@ -140,14 +140,9 @@ main {
   flex-shrink: 0;
 }
 
-.comment-item > div {
-  flex-grow: 1;
-}
-
 .comment-item > div > div {
   border-radius: 18px;
   background: var(--dark-lighten);
-  width: max-content;
   padding: 12px;
 }
 
@@ -156,4 +151,15 @@ main {
   margin-top: 5px;
   margin-left: 10px;
   font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  #similar {
+    width: auto;
+    max-height: none;
+  }
 }
