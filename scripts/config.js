@@ -103,7 +103,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // Variable to store user's message
-const API_KEY = "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"; // Paste your API key here
+const API_KEY = ""; // Paste your API key here
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -120,7 +120,9 @@ const createChatLi = (message, className) => {
 };
 
 const generateResponse = (chatElement) => {
-  const API_URL = "https://api.openai.com/v1/chat/completions";
+  // const API_URL = "https://api.openai.com/v1/chat/completions";
+  const API_URL =
+    "https://openai-proxy.napdev.workers.dev?url=https://api.openai.com/v1/chat/completions";
   const messageElement = chatElement.querySelector("p");
 
   // Define the properties and message for the API request
@@ -128,7 +130,7 @@ const generateResponse = (chatElement) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${API_KEY}`,
+      // Authorization: `Bearer ${API_KEY}`,
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",
